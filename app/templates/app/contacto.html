@@ -1,0 +1,43 @@
+{% extends 'app/base.html' %}
+{% block tittle %} Contacto {% endblock %}
+{% load static %}
+
+{%  block content  %}
+
+<br>
+    <h1 id="titulo-contacto">Contactanos</h1>
+    <br>
+    <div class="container-form">
+      <div class="box-form">
+          <form id="form">
+                <label for="">Nombre: </label>
+                <input type="text" name="" id="name">
+                <label for="">Apellido: </label>
+                <input type="text" name="" id="last-name">
+                <br>
+                <br>
+                <label for="">Rut: </label>
+                <input type="text" name="" id="rut">
+                <label for="" id="gender-label">Genero: </label>
+                <input type="text" name="" id="gender">
+                <br>
+                <br>
+                <label for="">Telefono: </label>
+                <input type="text" name="" id="phone">
+                <label for="correo">Correo: </label>
+                <input type="email" name="" id="email">
+                <br>
+                <br>
+                <label id="comentario">Envia un comentario</label>
+                <br>
+                <textarea id="textarea" cols="60" rows="10"></textarea>
+                <br>
+                <button type="submit">Enviar</button>
+                <p class="warnings" id="warnings"></p>
+            </form>      
+      </div>
+    </div>
+<br>
+<br>
+
+{% endblock %}

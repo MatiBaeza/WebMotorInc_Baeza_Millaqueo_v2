@@ -1,0 +1,51 @@
+{% extends 'app/base.html' %}
+{% block tittle %} Galeria {% endblock %}
+{% load static %}
+
+{%  block content  %}
+
+<br>
+<div class="container-img">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{% static '/imagenes/direccion 1.jpg' %}" width="300px" height="200px">
+            <br>
+        </div>
+        <div class="col-md-3">
+            <img src="{% static '/imagenes/direccion 2.jpg' %}" width="300px" height="200px">
+            <br>
+        </div>
+        <div class="col-md-3">
+            <img src="{% static '/imagenes/suspension 1.jpg' %}" width="300px" height="200px">
+            <br>
+        </div>
+        <div class="col-md-3">
+            <img src="{% static '/imagenes/suspension 2.jpg' %}" width="300px" height="200px">
+            <br>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container-img">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{% static '/imagenes/caja de cambios 1.jpg' %}" width="300px" height="200px">
+            <br>
+        </div>
+        <div class="col-md-3">
+            <img src="{% static '/imagenes/caja de cambios 2.jpg' %}" width="300px" height="200px">
+            <br>
+        </div>
+        <div class="col-md-3">
+            <img src="{% static '/imagenes/electronica 1.jpg' %}" width="300px" height="200px">
+            <br>
+        </div>
+        <div class="col-md-3">
+            <img src="{% static '/imagenes/electronica 2.jpg' %}" width="300px" height="200px">
+            <br>
+        </div>
+    </div>
+</div>
+<br>
+
+{% endblock %}

@@ -1,0 +1,222 @@
+body{
+    justify-content: center;
+    margin: 0;
+    padding:0;
+    height: 100%;
+}
+header{
+    font-family: Raleway-Bold;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    
+}
+h1{
+    font-family: monospace;
+}
+.container-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-footer{
+    justify-content: center;
+}
+.contenedor{
+    display: flex;
+    border: solid black;
+    border-radius: 15px;
+}
+.container{
+    display: flex;
+    border: solid black;
+    border-radius: 15px;
+}
+.container-img{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border: solid black;
+    border-radius: 15px;
+    text-align: center;
+}
+.col-md-3{
+    padding-right: 30px;
+}
+#servicio{
+    margin-left: 90px;
+}
+.contenedor p{
+    justify-content: center;
+    position: relative;
+    top: 30px;
+}
+
+.imagen{
+    width: 350px;
+    margin-right: 40px;
+    padding: 5px 5px 5px 5px;
+}
+.texto{
+    text-align: center;
+    padding: 20px;
+    
+}
+#footer{
+    background-color: #212529;
+    height: 140px;
+    flex-direction: column;
+    align-items: center;
+}
+.copy{
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 76px;
+}
+.nav{
+    justify-content: center;
+    position:relative;
+    bottom: 5px;
+}
+#contactanos{
+    font-family: monospace;
+    position: relative;
+    left: 120px;
+    top: 24px;
+    color: black;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    padding: 5px 10px;
+    padding-bottom: 5px;
+    width: 150px;
+    height: 45px;
+    background-color: white;
+    border: 3px solid black;
+    text-decoration: none;
+}
+#textarea{
+    width: 100%;
+    height: 300px;
+    resize: none;
+}
+#titulo-contacto{
+    font-family: monospace;
+    text-align: center;
+    margin: 5px 5px;
+}
+.container-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-form textarea{
+    align-items: center;
+}
+.box-form{
+    border: 5px solid black;
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-form button{
+    font-family: monospace;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    position: relative;
+    left: 200px;
+    margin: 5px;
+}
+.box-form #email{
+    width: 198px;
+}
+#rut{
+    position: relative;
+    left: 35px;
+}
+#gender{
+    position: relative;
+    left: 40px;
+}
+#gender-label{
+    position: relative;
+    left: 39px;
+}
+.warnings{
+    width:200px;
+    text-align: center;
+    margin: auto;
+    color: black;
+    padding-top: 20px;
+}
+#map {
+    height: 85%;
+    width: 100%;
+}
+#btnGuardar{
+    width: 100%;
+}
+th, td{
+    text-align: center;
+    vertical-align: middle;
+}
+@media(max-width:900px){
+    .contenedor{
+        font-size: 15px;
+        flex-direction: column;
+        padding: 10px 0;
+        
+    }
+    .imagen{
+        flex-direction: column;
+        width: 100%;
+    }
+    .copy{
+        font-size: 15px;
+    }
+    .formulario{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+    .box-form input{
+        width: 100%;
+    }
+    .box-form #email{
+        width: 100%;
+    }
+    .box-form button{
+        position: relative;
+        left: 20px;
+        width: 80%;
+    }
+    .box-form textarea{
+        width: 100%;
+        height: 100px;
+        resize: none;
+    }
+    .formulario label{
+        padding-right: 5px;
+    }
+    #rut{
+        position: relative;
+        left: 0%;
+    }
+    #gender{
+        position: relative;
+        left: 0%;
+    }
+    #gender-label{
+        position: relative;
+        left: 0%;
+    }
+}

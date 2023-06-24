@@ -1,0 +1,56 @@
+{% extends 'app/base.html' %}
+{% block tittle %} Inicio {% endblock %}
+{% load static %}
+
+{%  block content  %}
+
+<header>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static '/imagenes/car.jpg' %}" class="d-block w-100" alt="1">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static '/imagenes/car2.jpg' %}" class="d-block w-100" alt="2">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static '/imagenes/car3.jpg' %}" class="d-block w-100" alt="3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <br>
+      <h1>Reparaciones</h1>
+      <div class="contenedor">
+          <img class="imagen" src="{% static '/imagenes/mant.jpg' %}" alt="...">
+          <div class="texto">
+              <p>Servicio automotriz con basta experiencia y especializados en diferentes areas de la mecanica en general para vehiculos<br>
+              Las reparaciones dentro de este taller mecanico son totalmente transparentes, al momento de ingresar su vehiculo <br>se le explicara
+              exactamente el tipo de reparacion a realizar, al igual que el tiempo que tardará en estar terminada.<br>
+              Mas detalles de los servicios realizados en este taller en la pestaña de "servicios".</p>
+          </div>
+      </div>
+      <br>
+      <h1>Mantencion</h1>
+      <div class="contenedor">
+          <img class="imagen" src="{% static '/imagenes/aceit.jpg' %}" alt="...">
+          <div class="texto">
+            <p>Servicio automotriz con basta experiencia y especializados en diferentes areas de la mecanica en general para vehiculos<br>
+              Las Mantenciones dentro de este taller mecanico son totalmente transparentes, al momento de ingresar su vehiculo <br>se le explicara
+              exactamente el tipo de mantencion a realizar, al igual que el tiempo que tardará en estar terminada.<br>
+              Mas detalles de los servicios realizados en este taller en la pestaña de "servicios".</p>
+          </div>
+      </div>
+
+    
+    </header>
+    <br>
+
+{% endblock %}
