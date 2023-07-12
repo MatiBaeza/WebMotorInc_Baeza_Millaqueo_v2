@@ -5,15 +5,44 @@
 {%  block content  %}
 
 <br>
+<style>
+  #map {
+    height: 50%;
+    width: 50%;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+</style>
     <h2>Ubicacion</h2>
     <hr>
     <br>
+    <form>
+      <label for="destino">Selecciona una sucursal :</label>
+      <select id="Viaje" name="Viaje">
+        <option value="ED">Elegir Sucursal</option>
+        <option value="MU">Maipu</option>
+        <option value="PO">Puente alto</option>
+        <option value="PL">Pudahuel</option>
+        <option value="QA">Quilicura</option>
+        <option value="SB">San bernardo</option>
+        <option value="LC">Las condes</option>
+        <!-- Destinos de las sucursales  -->
+      </select>
+      <br>
+      <input type="submit" value="Mostrar rutas">
+    </form>
+
     <div id="map"></div>
+
     <script id="mapa"
         async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
     ></script>
 
+    
     <script>
         const mapDiv = document.getElementById("map");
         let map;
