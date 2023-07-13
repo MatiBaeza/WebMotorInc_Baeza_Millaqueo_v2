@@ -12,7 +12,7 @@
                 <form action="/editarPaquete/" method="post">
                     {% csrf_token %}
                     <div class="form-group">
-                        <input type="text" id="txtCodigo" name="txtCodigo" value= "{{paquete.codigo}}" class="form-control" placeholder="Codigo" 
+                        <input type="text" id="txtCodigo" name="txtCodigo" value= "{{paquete.id}}" class="form-control" placeholder="Codigo" 
                             minlength="6" maxlength="6" readonly required>
                     </div>
                     <br>

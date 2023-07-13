@@ -4,8 +4,10 @@ from django.contrib.auth import logout
 from .forms import CustomUserCreationForm
 from django.contrib.auth import authenticate, login
 from . models import Paquete
+from app.carrito import Carrito
 
 # Create your views here.
+
 
 def index(request):
     return render(request, 'app/index.html')
@@ -24,49 +26,67 @@ def productos(request):
 def ubicacion(request):
     return render(request, 'app/ubicacion.html')
 
+def tienda(request):
+    paquete = Paquete.objects.all()
+    return render(request, 'app/tienda.html', {"paquete" : paquete})  
+
+
+def agregar_carrito(request, paquete_id):
+    carrito = Carrito(request)
+    paquete = Paquete.objects.get(id=paquete_id)  
+    carrito.Add(paquete)
+    return redirect('/tienda')  
+
+def eliminar_carrito(request, paquete_id):
+    carrito = carrito(request)
+    paquete = Paquete.objects.get(id=paquete_id)
+    carrito.Remove(paquete)
+    return redirect('/tienda')
+
+def restar_carrito(request, paquete_id):
+    carrito = Carrito(request)
+    paquete = Paquete.objects.get(id=paquete_id)
+    carrito.Sub(paquete)
+    return redirect('/tienda')   
+
+def limpiar(request):
+    carrito = Carrito(request)
+    carrito.limpiar()
+    return redirect('/tienda')         
+
 def contacto(request):
     return render(request, 'app/contacto.html')     
-
-def register(request):
-    data = {
-        'form': CustomUserCreationForm()
-    }
-    if request.method == 'POST':
-        user_creation_form = CustomUserCreationForm(data=request.POST)
-        if user_creation_form.is_valid():
-            user_creation_form.save()
-            user = authenticate(username=user_creation_form.cleaned_data['username'], password=user_creation_form.cleaned_data['password1'])
-            login(request,user)
-            return redirect('index')
-    return render(request, 'registration/register.html',data)           
-
+      
 def registrarPaquete(request):
-    codigo=request.POST['txtCodigo']
+    id=request.POST['txtCodigo']
     nombre=request.POST['txtNombre']
+    imagen=request.FILE['txtImagen']
     precio=request.POST['numPrecio']
 
     paquete = Paquete.objects.create(
-        codigo=codigo, nombre=nombre, precio=precio)    
+        id=id, nombre=nombre, precio=precio)   
     return redirect('/productos')
 
-def edicionPaquete(request, codigo):
-    paquete = Paquete.objects.get(codigo = codigo)
+def edicionPaquete(request, id):
+    paquete = Paquete.objects.get(id = id)
     return render(request, "app/edicionPaquete.html", {"paquete": paquete})
 
 def editarPaquete(request):
-    codigo=request.POST['txtCodigo']
+    id=request.POST['txtCodigo']
     nombre=request.POST['txtNombre']
+    imagen=request.FILE['txtImagen']
     precio=request.POST['numPrecio']  
 
-    paquete = Paquete.objects.get(codigo = codigo)
+    paquete = Paquete.objects.get(id = id)
     paquete.nombre = nombre
+    paquete.imagen = imagen
     paquete.precio = precio
     paquete.save()
-
+ 
     return redirect('/productos')       
 
-def eliminarPaquete(request, codigo):
-    paquete = Paquete.objects.get(codigo = codigo)
+def eliminarPaquete(request, id):
+    paquete = Paquete.objects.get(id = id)
     paquete.delete()
 
     return redirect('/productos')

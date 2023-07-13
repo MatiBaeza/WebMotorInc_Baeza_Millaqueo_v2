@@ -1,37 +1,22 @@
-body{
-    justify-content: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+*{
     margin: 0;
     padding:0;
-    height: 100%;
-    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
-header{
-    font-family: Raleway-Bold;
-    font-weight: 400;
-    text-transform: none;
-    letter-spacing: 0;
+body{
+    overflow: auto;
+    height: 100vh;
+}
+.container-text{
+    display: flex;
+    background-color: black;
+    margin: auto;
     
 }
-h1{
-    font-family: monospace;
-}
-.container-footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.box-footer{
-    justify-content: center;
-}
-.contenedor{
-    display: flex;
-    border: solid black;
-    border-radius: 15px;
-}
-.container{
-    display: flex;
-    border: solid black;
-    border-radius: 15px;
+.container-text .texto{
+    color: white;
 }
 .container-img{
     display: flex;
@@ -47,55 +32,11 @@ h1{
 #servicio{
     margin-left: 90px;
 }
-.contenedor p{
-    justify-content: center;
-    position: relative;
-    top: 30px;
-}
 
 .imagen{
     width: 350px;
     margin-right: 40px;
     padding: 5px 5px 5px 5px;
-}
-.texto{
-    text-align: center;
-    padding: 20px;
-    
-}
-#footer{
-    background-color: #212529;
-    height: 140px;
-    flex-direction: column;
-    align-items: center;
-}
-.copy{
-    color: white;
-    text-align: center;
-    position: relative;
-    top: 76px;
-}
-.nav{
-    justify-content: center;
-    position:relative;
-    bottom: 5px;
-}
-#contactanos{
-    font-family: monospace;
-    position: relative;
-    left: 120px;
-    top: 24px;
-    color: black;
-    border-radius: 15px;
-    text-align: center;
-    align-items: center;
-    padding: 5px 10px;
-    padding-bottom: 5px;
-    width: 150px;
-    height: 45px;
-    background-color: white;
-    border: 3px solid black;
-    text-decoration: none;
 }
 #textarea{
     width: 100%;
@@ -158,7 +99,6 @@ h1{
     color: black;
     padding-top: 20px;
 }
-
 #map {
     height: 85%;
     width: 100%;
@@ -170,7 +110,82 @@ th, td{
     text-align: center;
     vertical-align: middle;
 }
-@media(max-width:900px){
+.footer{
+    width: 100%;
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+.footer .group-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+.footer .group-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .group-1 .box figure img{
+    width: 250px;
+}
+.footer .group-1 .box h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.footer .group-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.footer .group-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #222222f5;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.footer .group-1 a{
+    display: inline-block;
+    text-decoration: none;
+    width: 150px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #222222f5;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.footer .group-1 a:hover{
+    color: rgb(0, 158, 221);
+}
+.footer .group-2{
+    background-color: black;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+.footer .group-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .footer .group-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
     .contenedor{
         font-size: 15px;
         flex-direction: column;
